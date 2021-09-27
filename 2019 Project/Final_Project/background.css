@@ -1,0 +1,111 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.header{
+	position: absolute;
+	left:300px;
+	right:300px;
+}
+.pfp{
+	//border-style:solid;
+	position: absolute;
+	top:130px;
+	left:450px;
+	right:300px;
+	width:600px; 
+	height:auto;
+}
+img.dgdpfp{
+	position:absolute;
+	top:300px;
+	left:500px;
+}
+
+.btn {
+	border: none;
+	background-color: #cc5200;
+	padding: 14px 28px;
+	font-size: 16px;
+	cursor: pointer;
+	display: inline-block;
+	top:500px;
+	left:500px;
+}
+
+.btn:hover {background: #cc5200;}
+.about {color: white;}
+.live {color: white;}
+.music {color: white;}
+.pics {color: white;}
+
+.allbtn1{
+	position:absolute;
+	top:450px;
+	left:425px;
+}
+.allbtn2{
+	position:absolute;
+	top:450px;
+	left:565px;
+}
+.allbtn3{
+	position:absolute;
+	top:450px;
+	left:725px;
+}
+
+.allbtn4{
+	position:absolute;
+	top:450px;
+	left:900px;
+}
+
+div.calendar{
+	position: absolute;
+	top: 200px;
+	left:350px;
+	width: 200px;
+	height: 100px;
+}
+
+
+
+
+#about {
+	opacity: 0.8;
+	background-color: #e68a00;
+	color: white;
+	height:450px;
+	width:900px;
+	margin: 0px;
+	padding: 0px;
+	outline-style: solid;
+	outline-color: red;
+	outline-width: thick;
+	border-style: solid;
+	border-color: black;
+	border-width: 5px;
+}
+
+.audio{
+	position:fixed;
+}
+
+body{
+	background-image:url(images/DGDbackground.jpg);
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-color:#dcac29;
+	background-attachment: fixed;
+}
+
+div.container{
+    position:relative;
+	margin:0px auto;
+	width:1500px;
+	height:auto;
+}

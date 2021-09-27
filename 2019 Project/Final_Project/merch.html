@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">	
+	<head>
+		<meta charset="UTF-8">
+		<link rel='stylesheet' type='text/css' href='sidenav.css'>
+		<link rel='stylesheet' type='text/css' href='background.css'>
+		<link rel='stylesheet' type='text/css' href='merch.css'>
+		
+		<title> DGD Merch </title> 
+		<script src="jquery.js"></script>
+	</head>
+	<body>
+	<div class="container">
+		<div class="header">
+			<img src="images/dgdlogo.png" alt="dgdlogo" class="center">
+		</div>
+		
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/home.html">Home</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/tour.html">Tour</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/merch.html">Merch</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/subscribe.html">Subscribe</a>
+		</div>
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+		
+		<div id="cart">
+			<div class="cart_left">
+				<a  href="#"> <img src="images/cart.png" width="50" height="auto"></a>
+			</div>
+			<h3 class= "cart_right" id='the_cart'> </h3>
+		</div>
+		<div id="cart_count">
+			<h3 class= "cart_right" id='the_cart'> </h3>
+		</div>
+		
+		<div class="c_wrap">
+		<div class="wrapper">
+			<div class="item1">
+				<h3>Mothership Black Crewneck Crewneck Sweatshirt</h3>
+				<img src="images/merch1.jpeg">
+				<h3>$28</h3>
+				<button id='merch1'> Add Item </button>
+				<h3 id='m_1'></h3>                           <!--m_'numbers' displays each merch count within the cart--> 
+				<button id='delete1'> Delete Item </button>
+			</div>
+			<div class="item2">
+				<h3>Bless This Mess Black </h3>
+				<img src="images/merch2.jpeg">
+				<h3>$20</h3>
+				<button id='merch2'> Add Item </button>
+				<h3 id='m_2'></h3>
+				<button id='delete2'> Delete Item </button>
+			</div>
+			<div class="item3">
+				<h3>Mothership Black Pullover </h3>
+				<img src="images/merch3.jpeg">
+				<h3>$30</h3>
+				<button id='merch3'> Add Item </button>
+				<h3 id='m_3'></h3>
+				<button id='delete3'> Delete Item </button>
+			</div>  
+			<div class="item4">
+				<h3>Whatever I Say Is Royal Ocean Orange Cru... Vinyl LP </h3>
+				<img src="images/merch4.jpeg">
+				<h3>$25</h3>
+				<button id='merch4'> Add Item </button>
+				<h3 id='m_4'></h3>
+				<button id='delete4'> Delete Item </button>
+			</div>
+			<div class="item5">
+				<h3>Whatever I Say Is Royal Ocean Orange Mar... Vinyl LP  </h3>
+				<img src="images/merch5.jpeg">
+				<h3>$25</h3>
+				<button id='merch5'> Add Item </button>
+				<h3 id='m_5'></h3>
+				<button id='delete5'> Delete Item </button>
+			</div>
+			<div class="item6">
+				<h3>Mothership 3 Set Pack Sticker </h3>
+				<img src="images/merch6.jpeg">
+				<h3>$3</h3>
+				<button id='merch6'> Add Item </button>
+				<h3 id='m_6'></h3>
+				<button id='delete6'> Delete Item </button>
+			</div>
+			<div class="item7">
+				<h3>Mothership CD  </h3>
+				<img src="images/merch7.jpeg">
+				<h3>$3</h3>
+				<button id='merch7'> Add Item </button>
+				<h3 id='m_7'></h3>	
+				<button id='delete7'> Delete Item </button>
+			</div>
+			<div class="item8">
+				<h3>Tree City Sessions Green Cassette Cassette Tape  </h3>
+				<img src="images/merch8.jpeg">
+				<h3>$8 </h3>
+				<button id='merch8'> Add Item </button>
+				<h3 id='m_8'></h3>	
+				<button id='delete8'> Delete Item </button>
+			</div>
+			<div class="item9">
+				<h3>Is My...  </h3>
+				<img src="images/merch9.jpeg">
+				<h3>$15 </h3>
+				<button id='merch9'> Add Item </button>
+				<h3 id='m_9'></h3>	
+				<button id='delete9'> Delete Item </button>
+			</div>
+		</div>
+		</div>
+		
+		<script>
+		
+			var m1=0, m2=0, m3=0, m4=0, m5=0, m6=0, m7=0, m8=0, m9=0;
+			var cart=0;
+			
+			//window.document.getElementById("the_cart").innerHTML = cart;
+		
+			function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			}
+			////////////////////////////////////////
+			$("#delete1,#delete2,#delete3,#delete4,#delete5,#delete6,#delete7,#delete8,#delete9").hide();  
+			
+			$(document).ready(function(){
+				$("#merch1").click(function(){
+				$("#delete1").show();
+				});
+				
+				$("#merch2").click(function(){
+				$("#delete2").show();
+				});
+				
+				$("#merch3").click(function(){
+				$("#delete3").show();
+				});
+				
+				$("#merch4").click(function(){
+				$("#delete4").show();
+				});
+				
+				$("#merch5").click(function(){
+				$("#delete5").show();
+				});
+				
+				$("#merch6").click(function(){
+				$("#delete6").show();
+				});
+				
+				$("#merch7").click(function(){
+				$("#delete7").show();
+				});
+				
+				$("#merch8").click(function(){
+				$("#delete8").show();
+				});
+				
+				$("#merch9").click(function(){
+				$("#delete9").show();
+				});
+			});
+			
+			
+			/////////////////////////////////////
+			document.getElementById('merch1').addEventListener('click', function() {
+			add1();
+			});	
+			document.getElementById('merch2').addEventListener('click', function() {
+			add2();
+			});	
+			document.getElementById('merch3').addEventListener('click', function() {
+			add3();
+			});	
+			document.getElementById('merch4').addEventListener('click', function() {
+			add4();
+			});	
+			document.getElementById('merch5').addEventListener('click', function() {
+			add5();
+			});	
+			document.getElementById('merch6').addEventListener('click', function() {
+			add6();
+			});	
+			document.getElementById('merch7').addEventListener('click', function() {
+			add7();
+			});	
+			document.getElementById('merch8').addEventListener('click', function() {
+			add8();
+			});	
+			document.getElementById('merch9').addEventListener('click', function() {
+			add9();
+			});	
+			
+			document.getElementById('delete1').addEventListener('click', function() {
+			delete1();
+			});	
+			document.getElementById('delete2').addEventListener('click', function() {
+			delete2();
+			});	
+			document.getElementById('delete3').addEventListener('click', function() {
+			delete3();
+			});	
+			document.getElementById('delete4').addEventListener('click', function() {
+			delete4();
+			});	
+			document.getElementById('delete5').addEventListener('click', function() {
+			delete5();
+			});	
+			document.getElementById('delete6').addEventListener('click', function() {
+			delete6();
+			});	
+			document.getElementById('delete7').addEventListener('click', function() {
+			delete7();
+			});	
+			document.getElementById('delete8').addEventListener('click', function() {
+			delete8();
+			});	
+			document.getElementById('delete9').addEventListener('click', function() {
+			delete9();
+			});	
+			/////////////////////////////////////////////////////////
+			
+			function add1(){
+				m1++;
+				window.document.getElementById("m_1").innerHTML = m1;
+				//alert("add");
+				cart++;
+				window.document.getElementById("the_cart").innerHTML = cart;
+				
+			}
+			function delete1(){
+				if(m1==0){
+					alert("Item is not in the cart!");
+					return 0;
+				}else{ 
+					m1--;
+					window.document.getElementById("m_1").innerHTML = m1;
+				}
+				if(cart==0){
+					alert("Cart is empty!");
+					return 0;
+				}else{
+					cart--;
+					window.document.getElementById("the_cart").innerHTML = cart;
+				}
+			}
+			
+			function add2(){
+				m2++;
+				window.document.getElementById("m_2").innerHTML = m2;
+				//alert("add");
+				cart++;
+				window.document.getElementById("the_cart").innerHTML = cart;
+			}
+			function delete2(){
+				if(m2==0){
+					alert("Item is not in the cart!");
+					return 0;
+				}else{ 
+					m2--;
+					window.document.getElementById("m_2").innerHTML = m2;
+				}
+				
+				if(cart==0){
+					alert("Cart is empty!");
+					return 0;
+				}else{
+					cart--;
+					window.document.getElementById("the_cart").innerHTML = cart;
+				}
+			}
+			
+			function add3(){
+				m3++;
+				window.document.getElementById("m_3").innerHTML = m3;
+				//alert("add");
+				cart++;
+				window.document.getElementById("the_cart").innerHTML = cart;
+			}
+			function delete3(){
+				if(m3==0){
+					alert("Item is not in the cart!");
+					return 0;
+				}else{ 
+					m3--;
+					window.document.getElementById("m_3").innerHTML = m3;
+				}
+				
+				if(cart==0){
+					alert("Cart is empty!");
+					return 0;
+				}else{
+					cart--;
+					window.document.getElementById("the_cart").innerHTML = cart;
+				}
+			}
+			
+			function add4(){
+				m4++;
+				window.document.getElementById("m_4").innerHTML = m4;
+				//alert("add");
+				cart++;
+				window.document.getElementById("the_cart").innerHTML = cart;
+			}
+			function delete4(){
+				if(m4==0){
+					alert("Item is not in the cart!");
+					return 0;
+				}else{ 
+					m4--;
+					window.document.getElementById("m_4").innerHTML = m4;
+				}
+				if(cart==0){
+					alert("Cart is empty!");
+					return 0;
+				}else{
+					cart--;
+					window.document.getElementById("the_cart").innerHTML = cart;
+				}
+			}
+			
+			function add5(){
+				m5++;
+				window.document.getElementById("m_5").innerHTML = m5;
+				//alert("add");
+				cart++;
+				window.document.getElementById("the_cart").innerHTML = cart;
+			}
+			function delete5(){
+				if(m5==0){
+					alert("Item is not in the cart!");
+					return 0;
+				}else{ 
+					m5--;
+					window.document.getElementById("m_5").innerHTML = m5;
+				}
+				
+				if(cart==0){
+					alert("Cart is empty!");
+					return 0;
+				}else{
+					cart--;
+					window.document.getElementById("the_cart").innerHTML = cart;
+				}
+			}
+			
+			function add6(){
+				m6++;
+				window.document.getElementById("m_6").innerHTML = m6;
+				//alert("add");
+				cart++;
+				window.document.getElementById("the_cart").innerHTML = cart;
+			}
+			function delete6(){
+				if(m6==0){
+					alert("Item is not in the cart!");
+					return 0;
+				}else{ 
+					m6--;
+					window.document.getElementById("m_6").innerHTML = m6;
+				}
+				
+				if(cart==0){
+					alert("Cart is empty!");
+					return 0;
+				}else{
+					cart--;
+					window.document.getElementById("the_cart").innerHTML = cart;
+				}
+			}
+			
+			function add7(){
+				m7++;
+				window.document.getElementById("m_7").innerHTML = m7;
+				//alert("add");
+				cart++;
+				window.document.getElementById("the_cart").innerHTML = cart;
+			}
+			function delete7(){
+				if(m7==0){
+					alert("Item is not in the cart!");
+					return 0;
+				}else{ 
+					m7--;
+					window.document.getElementById("m_7").innerHTML = m7;
+				}
+				if(cart==0){
+					alert("Cart is empty!");
+					return 0;
+				}else{
+					cart--;
+					window.document.getElementById("the_cart").innerHTML = cart;
+				}
+			}
+			
+			function add8(){
+				m8++;
+				window.document.getElementById("m_8").innerHTML = m8;
+				//alert("add");
+				cart++;
+				window.document.getElementById("the_cart").innerHTML = cart;
+			}
+			function delete8(){
+				if(m8==0){
+					alert("Item is not in the cart!");
+					return 0;
+				}else{ 
+					m8--;
+					window.document.getElementById("m_8").innerHTML = m8;
+				}
+				
+				if(cart==0){
+					alert("Cart is empty!");
+					return 0;
+				}else{
+					cart--;
+					window.document.getElementById("the_cart").innerHTML = cart;
+				}
+			}
+			
+			function add9(){
+				m9++;
+				window.document.getElementById("m_9").innerHTML = m9;
+				//alert("add");
+				cart++;
+				window.document.getElementById("the_cart").innerHTML = cart;
+			}
+			function delete9(){
+				if(m9==0){
+					alert("Item is not in the cart!");
+					return 0;
+				}else{ 
+					m9--;
+					window.document.getElementById("m_9").innerHTML = m9;
+				}
+				
+				if(cart==0){
+					alert("Cart is empty!");
+					return 0;
+				}else{
+					cart--;
+					window.document.getElementById("the_cart").innerHTML = cart;
+				}
+			}
+		</script>
+		</div>
+	</body>
+</html>

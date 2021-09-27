@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel='stylesheet' type='text/css' href='sidenav.css'>
+		<link rel='stylesheet' type='text/css' href='background.css'>
+		
+		<title> DGD Home </title> 
+		<script src="jquery.js"></script>
+	</head>
+	<body>
+	<div class="container">
+		<div class="header">
+			<center>
+				<img src="images/dgdlogo.png" alt="dgdlogo" class="center">
+			</center>
+		</div>
+		<br>
+		<div class="pfp">
+			<center>
+				<img src="images/DGDhome.png" id="dgdpfp" class="center"> 
+			</center>
+		</div>
+		
+		
+	
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/home.html">Home</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/tour.html">Tour</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/merch.html">Merch</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/subscribe.html">Subscribe</a>
+		</div>
+
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+		
+		<div class='allbtn1'>
+			<button id='button1' class="btn about">About Us</button>
+			<br>
+			<div id='about'>
+				<p>Dance Gavin Dance is an American rock band from Sacramento, California, formed in 2005. The band currently consists of Tilian Pearson (clean vocals), Jon Mess (unclean vocals), Will Swan (lead guitar), Tim Feerick (bass guitar), Matthew Mingus (drums, percussion), and Andrew Wells (rhythm guitar and backing vocals). The band formerly included lead vocalists Jonny Craig and Kurt Travis. Swan and Mingus are the only band members who have appeared on every studio album.<br/>
+
+					The band released their debut extended play (EP), Whatever I Say Is Royal Ocean, in 2006 and signed to Rise Records thereafter. They released their full-length debut studio album, Downtown Battle Mountain, in May 2007. Craig and guitarist Sean O'Sullivan left the band and were replaced by vocalist Kurt Travis and guitarist Zachary Garren. The band released their second full-length album, Dance Gavin Dance, in August 2008. Vocalist Jon Mess and bass guitarist Eric Lodge left the group before the album's release and Lodge was replaced by bassist Jason Ellis. Happiness was released as the band's third studio album in June 2009 and is the group's first release to feature guitarist Will Swan pursuing screaming vocals along with guitar parts for an album.<br/>
+
+					In 2010, vocalists Jonny Craig and Jon Mess, and bassist Eric Lodge returned to the group and recorded their fourth studio album, Downtown Battle Mountain II, which was released in March 2011. Craig and Lodge left the band in 2012, leading to former Tides of Man vocalist Tilian Pearson, bass guitarist Tim Feerick, and guitarist Josh Benton joining the band. They released their fifth studio album, Acceptance Speech in October 2013, charting at No. 42 on the Billboard 200; Benton left the band shortly after the album's release. They released their sixth studio album, Instant Gratification, in April 2015, charting at No. 32 on the Billboard 200. In late 2015, the band embarked on their 10 year anniversary tour with A Lot Like Birds, Slaves, Strawberry Girls, and Dayshell. In 2016, the group released their live album, Tree City Sessions, and their seventh studio album, Mothership. The following year, the band released a cover of the Bruno Mars single "That's What I Like" for Punk Goes Pop Vol. 7, a stand-alone single "Summertime Gladness", and toured on the Vans Warped Tour. They released their eighth studio album, Artificial Selection, on June 8, 2018, and another stand-alone single, "Head Hunter", in March 2019.<br/>
+				</p>
+			</div>
+			
+			
+		</div>
+		<br>
+		<div class='allbtn2'>
+			<button id='button2' class="btn live">Live Shows</button>
+			<br>
+			<div id='video1'>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/AC9rgf6BAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/q5HoC8hs2QQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+			</div>
+		</div>
+		<br>
+		<div class='allbtn3'>
+			<button id='button3' class="btn music">Music Videos</button>
+			<br>
+			<div id='video2'>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/pdpnn45mir8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/H-IoyUQ5Dp0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+			</div>
+		</div>
+		
+	<br>
+	<div class='allbtn4'>
+			<button id='button4' class="btn pics">Live Pictures</button>
+			<br>
+			<div id='live_pics'>
+				<img src="images/live1.jpg" width="600" height="auto"> 
+				<br>
+				<img src="images/live2.jpg" width="600" height="auto"> 
+				<br>
+				<img src="images/live3.jpg" width="600" height="auto"> 
+				<br>
+				<img src="images/live4.jpg" width="600" height="auto"> 
+				<br>
+			</div>
+		</div>
+		
+		<div class="audio">
+			<audio controls autoplay="autoplay">
+				<source src="deathofastrawberry.mp3" type="audio/mpeg">
+				Your browser does not support the audio tag.
+			</audio>
+		</div>
+		<script>
+		////////////////////Navigation/////////////////////////////////
+			function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			}
+		///////////////////////////////////////////////////////////////
+			$("#video1,#video2,#about,#live_pics").hide();  
+		//	$("#video2").hide(); 
+			
+			$(document).ready(function(){
+				$("#button1").click(function(){
+				$("#video1").hide("slow");
+				$("#video2").hide("slow");
+				$("#live_pics").hide("slow");
+				$("#about").fadeToggle("slow");
+				});
+				
+				$("#button2").click(function(){
+				$("#video2").hide("slow");
+				$("#about").hide("slow");
+				$("#live_pics").hide("slow");
+				$("#video1").fadeToggle("slow");
+				});
+				
+				$("#button3").click(function(){
+				$("#video1").hide("slow");
+				$("#about").hide("slow");
+				$("#live_pics").hide("slow");
+				$("#video2").fadeToggle("slow");
+				});
+			
+				$("#button4").click(function(){
+				$("#video1").hide("slow");
+				$("#about").hide("slow");
+				$("#video2").hide("slow");
+				$("#live_pics").fadeToggle("slow");
+				});
+			});
+			
+			
+		</script>
+	</div>
+	</body>
+</html>

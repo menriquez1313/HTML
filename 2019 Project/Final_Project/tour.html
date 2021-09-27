@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel='stylesheet' type='text/css' href='sidenav.css'>
+		<link rel='stylesheet' type='text/css' href='background.css'>
+		<link rel='stylesheet' type='text/css' href='tour.css'>
+		
+		<title> DGD Tour </title>
+		<script src="jquery.js"></script>		
+	</head>
+	<body>
+	<div class="container">
+		<div class="header">
+			<img src="images/dgdlogo.png" alt="dgdlogo" class="center">
+		</div>
+		
+		
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/home.html">Home</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/tour.html">Tour</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/merch.html">Merch</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/subscribe.html">Subscribe</a>
+		</div>
+
+
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+
+		<div class="calendar">
+			<!--center-->
+			<iframe src="https://calendar.google.com/calendar/embed?src=gi43gnifvouup8srlco64hpt38%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="500" frameborder="0" scrolling="no"></iframe>		
+			<!--/center-->
+		</div>
+		<br>
+		<div class="wrapper">
+			<div>
+				<h4> Sunday, May 12 - Los Angles, CA @EL REY THEATRE  </h4>
+			</div>
+			<div >
+				<button id='buy_t'> Buy Ticket </button>
+				<button id='rsvp'> RSVP </button>
+			</div>
+			<div>
+				<h4> Friday, July 19 - Oshkosh, WI @ROCK USA </h4>
+			</div>  
+			<div>
+				<button id='buy_t'> Buy Ticket </button>
+				<button id='rsvp'> RSVP </button>
+			</div>
+			<div>
+				<h4> Sunday, July 21 - Mountain View, CA @Vans Warped Tour (July20-21) </h4>
+			</div>
+			<div>
+				<button id='buy_t'> Buy Ticket </button>
+				<button id='rsvp'> RSVP </button>
+			</div>
+			
+		</div>
+	
+		
+		
+		
+	<script>
+		///////////////////////////////////////Navigate////////////////////////////////
+		function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		}
+		////////////////////////////////////////////////////////////////////
+		
+				
+	</script>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<!-- This page was left unfinished. I had issues with validating the inputs. I tried several different ways to validate but each 
+style would give me an error I could not figure out. -->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel='stylesheet' type='text/css' href='sidenav.css'>
+		<link rel='stylesheet' type='text/css' href='background.css'>
+		<link rel='stylesheet' type='text/css' href='subscribe.css'>
+		
+		<title> DGD Subscribe </title>
+		<script src="jquery.js"></script>
+		<script src="jquery-3.2.1.min.js"> </script>			
+	</head>
+	<body>
+	<div class="container">
+		<div class="header">
+			<img src="images/dgdlogo.png" alt="dgdlogo" class="center">
+		</div>
+		
+		
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/home.html">Home</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/tour.html">Tour</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/merch.html">Merch</a>
+			<a href="https://www.cs.csubak.edu/~menriquez/cs2680/webdevlab/Final_Project/subscribe.html">Subscribe</a>
+		</div>
+
+
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+			<div class="subscribe">
+			<div class="form">
+			<form class="register-form" id="myForm">
+				<input type="text" id="Fname" name ="Fname" placeholder="First Name" value=''/>
+				<input type="text" id="Lname" name ="Lname" placeholder="Last Name" value=''/>
+				<input type="text" name ="email" placeholder="Email"/>
+				<button class ="btn" type ="sub">Subscribe</button>
+			</form>
+			<div id='error'></div>
+			
+			</div>
+			</div>
+		
+		
+	
+	<script>
+		///////////////////////////////////////Navigate////////////////////////////////
+		function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		}
+		/*///////////////////////////////////////////////////////////////////
+		$("#thank").hide(); 
+		
+		$("#btn").click(function(){
+		$("form").hide("slow");
+		$('#thank').fadetoggle("slow");
+		});
+		/////////////////////////////////////////////////////////////////////*/
+		
+		document.getElementById('myForm').addEventListener('sub', function(evt) {
+	
+		evt.preventDefault();  // prevent the form from being submitted
+		alert('submit occurred');
+
+		if(  validateForm()   ) {
+			alert('form was valid **submitted**');
+		}
+		else {
+			alert('form was invalid');
+		}
+
+		});
+		
+		
+		function validateForm() {
+		var out=''; 
+
+		var nameInput1 = document.getElementById('Fname');
+		
+		var nameInput2 = document.getElementById('Lname');
+
+		var nameVal1 = nameInput1.value;
+		if(nameVal1 == "") {
+		out += "Missing First Name <br>";
+		}
+		var nameVal2 = nameInput2.value;
+		if(nameVal2 == "") {
+		out += "Missing Last Name <br>";
+		}
+		
+
+    document.getElementById('error').innerHTML = out;
+    if(out!='') {
+        return(false); 
+    }else {
+        return(true);
+    }
+	}
+	</script>
+	</div>
+	</body>
+</html>
