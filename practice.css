@@ -1,0 +1,32 @@
+p{
+    color:orange;
+    font-size: 16px ;
+}
+
+div{
+    /*similar to divide on html*/
+}
+
+/*class selectors*/
+.awesome{
+...
+}
+
+/*For HTML you can call out these selectors from CSS by the example below
+
+<div class="awesome">...</div>
+<p class="awesome">...</p> 
+*/
+
+/* ID Selector*/
+
+#shayhowe{
+    .....
+}
+
+/*HTML Example
+
+<div id="shayhowe">...</div>
+*/
+
+
